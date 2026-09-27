@@ -1,12 +1,12 @@
 {
-  "name": "wexample/symfony-stripe",
+  "name": "wexample/symfony-payment-stripe",
   "description": "Stripe helpers for Symfony",
   "type": "library",
   "license": "MIT",
   "version": "1.0.95",
   "autoload": {
     "psr-4": {
-      "Wexample\\SymfonyStripe\\": "src/"
+      "Wexample\\SymfonyPaymentStripe\\": "src/"
     }
   },
   "authors": [

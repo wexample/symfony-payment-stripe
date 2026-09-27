@@ -6,7 +6,7 @@ The package is a Composer library, not a Symfony bundle. composer.json declares 
 
 ```json
 "psr-4": {
-  "Wexample\\SymfonyStripe\\": "src/"
+  "Wexample\\SymfonyPaymentStripe\\": "src/"
 }
 ```
 
@@ -14,7 +14,7 @@ There is no bundle class, no `DependencyInjection/`, no `config/services.yaml`, 
 
 ### `StripeHelper`
 
-`Wexample\SymfonyStripe\Helper\StripeHelper` is a plain class with two public static methods, no constructor, no properties and no state. Callers reach it statically, which is why the absence of a container registration costs nothing.
+`Wexample\SymfonyPaymentStripe\Helper\StripeHelper` is a plain class with two public static methods, no constructor, no properties and no state. Callers reach it statically, which is why the absence of a container registration costs nothing.
 
 Both methods take everything they need as arguments. Neither reads an environment variable, a parameter bag or a configuration file: the environment name and the webhook secret arrive as `string` parameters. The package therefore makes no decision about where the Stripe keys live — the host application does.
 

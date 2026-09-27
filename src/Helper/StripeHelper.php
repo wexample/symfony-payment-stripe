@@ -1,6 +1,6 @@
 <?php
 
-namespace Wexample\SymfonyStripe\Helper;
+namespace Wexample\SymfonyPaymentStripe\Helper;
 
 use function hash_hmac;
 

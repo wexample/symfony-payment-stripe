@@ -14,7 +14,7 @@ Author: agent:archeology
 
 ## Goal
 
-Turn `symfony-stripe`, which today is a single `StripeHelper`, into the Stripe provider of the payment stack. It should contain:
+Turn `symfony-payment-stripe`, which today is a single `StripeHelper`, into the Stripe provider of the payment stack. It should contain:
 - PaymentIntent creation;
 - a secured, idempotent webhook endpoint;
 - a Stripe client factory, with the API version pinned in config;

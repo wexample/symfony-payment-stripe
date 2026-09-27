@@ -1,4 +1,4 @@
-# wexample/symfony-stripe
+# wexample/symfony-payment-stripe
 
 Version: 1.0.80
 

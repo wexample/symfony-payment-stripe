@@ -1,8 +1,8 @@
-# symfony_stripe
+# symfony_payment_stripe
 
 Version: 1.0.95
 
-`wexample/symfony-stripe` is a Composer library for Symfony applications that integrate Stripe. It ships a single static class, `Wexample\SymfonyStripe\Helper\StripeHelper` in src/Helper/StripeHelper.php, with two functions: `isStripeTestEnvironment()`, which reports whether an environment name belongs to `EnvironmentHelper::LIST_LOW_SECURITY` (`dev`, `local`, `test`) and so should talk to Stripe in test mode, and `buildFakeSignature()`, which forges a `t=…,v1=…` signature header from a payload and a webhook secret. It depends only on `wexample/symfony-helpers` — no Stripe SDK — so a webhook controller can be exercised locally and in tests without a call to Stripe.
+`wexample/symfony-payment-stripe` is a Composer library for Symfony applications that integrate Stripe. It ships a single static class, `Wexample\SymfonyPaymentStripe\Helper\StripeHelper` in src/Helper/StripeHelper.php, with two functions: `isStripeTestEnvironment()`, which reports whether an environment name belongs to `EnvironmentHelper::LIST_LOW_SECURITY` (`dev`, `local`, `test`) and so should talk to Stripe in test mode, and `buildFakeSignature()`, which forges a `t=…,v1=…` signature header from a payload and a webhook secret. It depends only on `wexample/symfony-helpers` — no Stripe SDK — so a webhook controller can be exercised locally and in tests without a call to Stripe.
 
 ## Table of Contents
 
@@ -22,7 +22,7 @@ The package is a Composer library, not a Symfony bundle. composer.json declares 
 
 ```json
 "psr-4": {
-  "Wexample\\SymfonyStripe\\": "src/"
+  "Wexample\\SymfonyPaymentStripe\\": "src/"
 }
 ```
 
@@ -30,7 +30,7 @@ There is no bundle class, no `DependencyInjection/`, no `config/services.yaml`, 
 
 ### `StripeHelper`
 
-`Wexample\SymfonyStripe\Helper\StripeHelper` is a plain class with two public static methods, no constructor, no properties and no state. Callers reach it statically, which is why the absence of a container registration costs nothing.
+`Wexample\SymfonyPaymentStripe\Helper\StripeHelper` is a plain class with two public static methods, no constructor, no properties and no state. Callers reach it statically, which is why the absence of a container registration costs nothing.
 
 Both methods take everything they need as arguments. Neither reads an environment variable, a parameter bag or a configuration file: the environment name and the webhook secret arrive as `string` parameters. The package therefore makes no decision about where the Stripe keys live — the host application does.
 
