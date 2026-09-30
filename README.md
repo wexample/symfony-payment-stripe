@@ -1,6 +1,6 @@
 # symfony_payment_stripe
 
-Version: 1.0.96
+Version: 1.0.97
 
 `wexample/symfony-payment-stripe` is a Composer library for Symfony applications that integrate Stripe. It ships a single static class, `Wexample\SymfonyPaymentStripe\Helper\StripeHelper` in src/Helper/StripeHelper.php, with two functions: `isStripeTestEnvironment()`, which reports whether an environment name belongs to `EnvironmentHelper::LIST_LOW_SECURITY` (`dev`, `local`, `test`) and so should talk to Stripe in test mode, and `buildFakeSignature()`, which forges a `t=…,v1=…` signature header from a payload and a webhook secret. It depends only on `wexample/symfony-helpers` — no Stripe SDK — so a webhook controller can be exercised locally and in tests without a call to Stripe.
 
@@ -83,7 +83,7 @@ Visit the [Wexample Suite documentation](https://docs.wexample.com) for the comp
 ## Dependencies
 
 - php: >=8.5
-- wexample/symfony-helpers: >=11.0.0
+- wexample/symfony-helpers: >=12.0.0
 
 ## Versioning & Compatibility Policy
 
